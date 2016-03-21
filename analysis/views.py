@@ -1,10 +1,7 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from django.template import RequestContext
 from django.http import HttpResponse
 
 def index(request):
-	#return render_to_response(
-    #    'index.html',
-    #    context_instance=RequestContext(request),
-    #)
-	return HttpResponse("analysis page")
+	return render(request, 'analysis/index.html', {})
+#	return HttpResponse("analysis page")
