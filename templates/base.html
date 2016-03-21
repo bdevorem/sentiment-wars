@@ -3,7 +3,7 @@
 
  <html>
   <head>
-    <title>Sentiment Wars</title>
+    <title>ND LUG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
     <link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -26,10 +26,51 @@
         <span class="icon-bar"></span>
       </button>
 		<a class="navbar-brand" href="/">
-        <img alt="" style="top:-5px" src="/static/tux-nd.png">
+        <img alt="ND LUG" style="top:-5px" src="/static/tux-nd.png">
       </a> 
 
     </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      	<!--
+      	<li><a class="glyphicon glyphicon-check" href="#"> Polls</a></li>
+        <li class="dropdown">
+          <a class="glyphicon glyphicon-book" href="#" class="dropdown-toggle" data-toggle="dropdown"> Info <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Archives</a></li>
+            <li class="divider"></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </li>
+        
+        {% if user.is_authenticated %}
+        <li><a>{{ user.username }}</a></li>
+        <li><a href="{% url 'auth_logout' %}">Logout</a></li>
+        {% else %}
+        <li><a href="{% url 'auth_login' %}">Login</a></li>
+        <li><a class="glyphicon glyphicon-user" href="{% url 'registration_register' %}">Register</a></li>
+
+        {% endif %}
+		-->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+      <h2></h2>
+      <br>
+	<!-- 
+		{% if messages %}
+			{% for message in messages %}
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                    <div class="alert alert-info" role="alert">{{ message }}</div>
+                {% endif %}
+			{% endfor %}
+		{% endif %}
+      {% block content %}{% endblock %}
+	-->
   </div>
       <br>
       <h2></h2>
