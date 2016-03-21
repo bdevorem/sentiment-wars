@@ -1,0 +1,1 @@
+web: gunicorn sentiment_wars.wsgi --log-file -
