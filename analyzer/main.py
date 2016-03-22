@@ -24,13 +24,37 @@ api = tweepy.API(auth)
 
 if __name__ == '__main__':
 
-	tweets = search_tweets(api)
+	
+	print("Welcome to Sentiment Wars!")
+	print("--------------------------")
+	print("Web interface at:\nhttp://sentiment-wars.herokuapp.com/")
+	
+	while True:
+		print("--------------------------")
+		print("Would you like to use Twitter-queried tweets or enter your own input? ")
+		choice = input("'y' for Twitter, 'n' for your own: ")
 
-	for tweet in tweets:
-		print ("Tweet: \n" + tweet)
-		# run tweet through automaton
-		result = analyze(tweet)
-		print (result)
+		if choice == 'y':
+			tweets = search_tweets(api)
+
+			for tweet in tweets:
+				print ("Tweet: \n" + tweet)
+				# run tweet through automaton
+				result = analyze(tweet)
+				print (result)
+	
+		else:
+			print("--------------------------")
+			tweet = input("Think of something good and submit by pressing Enter!\n")
+
+			result = analyze(tweet.replace(',', '').replace('.',''))
+			print ("Sentiment: " + result)
+
+		print("--------------------------")
+		keep = input("Quit? y/n ")
+		if keep == "y":
+			break
+	
 
 	#result = analyze("I love Star Wars, this should be positive")	
 	#print (result)

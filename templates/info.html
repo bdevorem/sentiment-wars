@@ -20,8 +20,8 @@
         <div class="header">
             <nav>
 				<ul class="nav nav-pills pull-right">
-                    <li role="presentation" class="active"><a href="/automaton">Analyzer</a></li>
-		    		<li role="presentation"><a href="/info">Info</a></li
+                    <li role="presentation"><a href="/">Analyzer</a></li>
+		    		<li role="presentation" class="active"><a href="/info">About</a></li
                 </ul>
             </nav>
 
@@ -29,7 +29,7 @@
         </div>
  
         <div class="jumbotron">
-            <h1>Project Information</h1>
+            <h1>About the Project</h1>
         </div>
 
 		<hr>
@@ -37,16 +37,112 @@
  		<!-- Section 1,  -->
         <div class="row-fluid">
             <div class="span12 text-left">
-                <h2><span class="label label-success">Welcome!</h2>
+                <h2><span class="label label-success">Automaton</h2>
 				<br>                
 				<p>
-					<h5>Testing</h5></p>
-				</p>
+					The finite automaton used for the sentiment analysis
+					consists of four different states. Each input,
+					a string consisting of multiple English words 
+					delimited by whitespace, starts out in the Start
+					State. From here, one word is read at a time. As soon
+					as the Start State encounters a 'negative' word, the
+					appropriate transition is followed to the Negative
+					State. A similar transition is made on a 'postive'
+					word to the Positive State. If any other word is read,
+					a self-loop is made on the Start State.
+					<br> <br>
+					From the Positive State, if a 'negative' word is read,
+					a transition is made to the Negative State. If a 
+					'change' word is read, a transition is made to the
+					Change State. A 'change' word is a word that implies
+					a change of sentiment in the input, such as 'but' or
+					'theoretically'. All other words result in a self-loop
+					on the Positive State.
+					<br> <br>
+					Similarly, in the Negative State, a 'positive' word
+					transitions to the Positive State, a 'change'
+					word transitions to the Change state, and any other
+					input words result in a self-loop.
+					<br> <br>
+					From the Change State, if a 'positive' word is read,
+					a transition is made to the Positive State. If a 
+					'negative' word is read, a transition is made to the
+					Negative State. All other inputs result in a 
+					self-loop. If an input ends up in the Change State
+					or the Positive State, the automaton accepts. 
+					Additionally, ending in these states means that the	
+					sentiment is positive. Ending in the Negative State
+					means that the sentiment is either negative or 
+					inconclusive, since this automaton is the 
+					glass-half-full type, and ending in the Start State
+					means the sentiment is inconclusive since that means
+					input was either invalid or did not contain any
+					positive or negative words.
+					</p>
             </div>
         </div>
 
-		<hr>		
-		
+		<hr>	
+
+		<!-- Section 2,  -->
+        <div class="row-fluid">
+            <div class="span12 text-left">
+                <h2><span class="label label-success">Web Interface</h2>
+                <br>
+                <p>
+                    On the Analyzer page of this project, you have 
+					probably seen a list of tweets and a button to 
+					analyze them, using the automaton in the project.
+					These tweets have been queried from Twitter using
+					the Tweepy Search wrapper. The query included
+					the terms "force awakens" for obvious reasons, but 
+					also included other non-obvious characteristics. The
+					search included "saw OR opinion" to get tweets where 
+					the intent is to explain an opinion on the movie, 
+					since the Twitter Search API can only query for
+					tweets in the last week. Since the movie came out
+					a few months ago, this query narrows down the 
+					results. Additionally, the query also included
+					"-blu" to rid the results of discussion of the 
+					new blu-ray release of the movie.
+					<br> <br>
+					These tweets are not being fed into the automaton
+					in real time. Instead, they were previously run
+					through the automaton in the command-line interface
+					and then the data was used to create both static
+					and dynamic pages for this web app.
+                </p>
+            </div>
+        </div>
+
+        <hr>
+	
+		<!-- Section 3,  -->
+        <div class="row-fluid">
+            <div class="span12 text-left">
+                <h2><span class="label label-success">Command-Line Interface</h2>
+                <br>
+                <p>
+                    kjdfsnilkjbdfsikbsdfbhdgs
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+		<!-- Section 4, Repo -->
+        <div class="row-fluid">
+            <div class="span12 text-left">
+            <p class="lead"><h3>
+                <span class="glyphicon glyphicon-asterisk"></span>
+                Take a look at this webpage's <a href="https://github.com/bdevorem/sentiment-wars">repository</a></h3>
+            </p>
+            </div>
+        </div>
+
+        <hr>
+
+
 		<footer class="footer">
 	        <div class="container text-center">
     		    &copy; Built with <a href="https://www.python.org/">Python</a>, <a href="http://flask.pocoo.org/">Flask</a>, and <a href="h>ttp://getbootstrap.com/">Bootstrap</a>.

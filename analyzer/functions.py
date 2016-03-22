@@ -48,7 +48,7 @@ def search_tweets(api):
 				#q="the force awakens",
 				#since="2015-12-16",
 				#until="2016-01-20",
-				q="saw OR opinion force awakens -Last -last -http -? -haven't -Marvel -trek -Curious -https -waiting",
+				q="saw OR opinion force awakens -blu -Last -last -http -? -haven't -Marvel -trek -Curious -https -waiting",
 				exclude_replies=True,
 				lang="en").items(20):
 		if "RT" not in tweet.text:

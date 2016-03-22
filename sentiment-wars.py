@@ -6,15 +6,6 @@ from analyzer.automaton import *
 def main():
 	return render_template('index.html')
 
-@app.route("/automaton")
-def automaton():
-	return render_template('index.html')
-
-@app.route('/automaton/tweet1')
-def analyze_tweet1():
-	#analyze_it()
-    return render_template('tweet1.html') #for now
-
 @app.route('/info')
 def showLinks():
     return render_template('info.html')
