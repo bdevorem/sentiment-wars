@@ -1,5 +1,10 @@
 #!/usr/bin/python
+# functions.py
+# functions that interact directly with Tweepy API
+# author: Breanna Devore-McDonald
+# Mar 21 2016
 from keys import keys
+import tweepy
 
 SCREEN_NAME = keys['screen_name']
 CONSUMER_KEY = keys['consumer_key']
@@ -13,8 +18,7 @@ def unfollow_friends(api):
     """
     for f in api.friends_ids(SCREEN_NAME):
         if f not in api.followers_ids(SCREEN_NAME):
-            print ('Unfollow %s?' + api.get_user(f).screen_name)
-            a = input('Y/N?')
+            a = input('Unfollow %s?' + api.get_user(f).screen_name)
             if a.rstrip()  == "y":
                 #print ("\""+a+"\"")
                 api.destroy_friendship(f)
@@ -34,12 +38,21 @@ def update_stat(api):
     """
     api.update_status('testing')
 
-def get_tweets(api):
+def search_tweets(api):
 	"""
-	get tweets w/ 'the force awakens', between 12/15 and 12/25 of
-	2015, the release week of Star Wars 7
+	get relevant tweets
 	"""
-	for tweet in tweepy.Cursor(api.search,q='the force awakens',since='2015-12-15',until='2015-12-25').items():
-		print (tweet.text)
+	rel_tweets = []
+	for tweet in tweepy.Cursor(api.search,
+				#q="the%20force%20awakens%20since%3A2015-12-16%20until%3A2015-12-25&src=typd",
+				#q="the force awakens",
+				#since="2015-12-16",
+				#until="2016-01-20",
+				q="saw OR opinion force awakens -Last -last -http -? -haven't -Marvel -trek -Curious -https -waiting",
+				exclude_replies=True,
+				lang="en").items(20):
+		if "RT" not in tweet.text:
+			#print (tweet.text)
+			rel_tweets.append(tweet.text)
 
-
+	return rel_tweets
