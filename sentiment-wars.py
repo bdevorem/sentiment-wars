@@ -1,18 +1,24 @@
 from flask import Flask, render_template
 app = Flask(__name__)
+from analyzer.automaton import *
 
 @app.route("/")
 def main():
 	return render_template('index.html')
 
-@app.route('/Analyzer')
-def showHome():
-    return render_template('index.html')
+@app.route("/automaton")
+def automaton():
+	return render_template('index.html')
 
-@app.route('/Info')
+@app.route('/automaton/tweet1')
+def analyze_tweet1():
+	#analyze_it()
+    return render_template('tweet1.html') #for now
+
+@app.route('/info')
 def showLinks():
     return render_template('info.html')
 
 if __name__ == "__main__":
 	app.debug = True #don't have to restart code to show changes in browser
-	app.run() #runs on local host given no parameters
+	app.run() #runs on local host given no parameters, port 5000
