@@ -1,6 +1,6 @@
 //Breanna Devore-McDonald
 
-document.getElementById("b1").onmouseup = changeText
+document.getElementById("b15").onmouseup = changeText
 
 //var label = document.createElement("p");
 //label.setAttribute("id", "Label1");
@@ -10,6 +10,6 @@ document.getElementById("b1").onmouseup = changeText
 //document.body.appendChild(label);
 
 function changeText(){
-	document.getElementById("l1").textContent = "Positive";
+	document.getElementById("l15").textContent = "Positive";
 
 }
