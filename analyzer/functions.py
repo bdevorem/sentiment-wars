@@ -53,6 +53,6 @@ def search_tweets(api):
 				lang="en").items(20):
 		if "RT" not in tweet.text:
 			#print (tweet.text)
-			rel_tweets.append(tweet.text)
+			rel_tweets.append(tweet.text.replace(',', '').replace('.', '').lower())
 
 	return rel_tweets

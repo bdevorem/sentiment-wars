@@ -11,7 +11,25 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/static/js/b1.js"></script>
+	<script src="/static/js/b2.js"></script>
+	<script src="/static/js/b3.js"></script>
+	<script src="/static/js/b4.js"></script>
+	<script src="/static/js/b5.js"></script>
+	<script src="/static/js/b6.js"></script>
+	<script src="/static/js/b7.js"></script>
+	<script src="/static/js/b8.js"></script>
+	<script src="/static/js/b9.js"></script>
+	<script src="/static/js/b10.js"></script>
+	<script src="/static/js/b11.js"></script>
+	<script src="/static/js/b12.js"></script>
+	<script src="/static/js/b13.js"></script>
+	<script src="/static/js/b14.js"></script>
+	<script src="/static/js/b15.js"></script>
+	<script src="/static/js/b16.js"></script>
+	<script src="/static/js/b17.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
  
 <body>
@@ -37,10 +55,24 @@
  		<!-- Section 1,  -->
         <div class="row-fluid">
             <div class="span12 text-left">
-                <h2><span class="label label-success">Welcome!</h2>
+                <h2><span class="label label-success">About the Project</h2>
 				<br>                
-				<p>
-					<h5>Testing</h5></p>
+				<p style="text-index: 40px">		
+						Sentiment Wars is a sentiment analyzer of tweets
+						regarding 'Star Wars: The Force Awakens'. In this
+						web app, you will see a series of tweets queried
+						using the Twitter Search API and the Tweepy 
+						wrapper, along with their sentiment analysis 
+						using a 4-state finite automaton. The actual
+						automaton is generalized, i.e. it can accept
+						any input in the form of multiple English words
+						delimited by whitespace. The Sentiment Wars 
+						automaton can be downloaded from this app's
+						Github, along with the README containing 
+						directions on how to run the automaton from the
+						command line with user-inputted tweets, or with
+						specific Twitter Search queries.
+				
 				</p>
             </div>
         </div>
@@ -50,13 +82,135 @@
 		<!-- Section 2,  -->		
 		<div class="row-fluid">
 			<div class="span12 text-left"> 
-				<h2><span class="label label-success">About The Project</span></h2><br>
-				<div class="row-fluid">
-					<div class="span8 text-left"> 
-				    <p><h5>
-						Testing 2
-				    <br></p></h5>
-				    </div>
+				<h2><span class="label label-success">Analyzer</span></h2><br>
+				<div class="span12">
+					<div class="container text-left">
+  					<table class="table" align="center" style="width:100%">
+    				<thead>
+    			    <tr>
+        				<th>Tweet</th>
+        				<th>            </th>
+        				<th>Analysis</th>
+      				</tr>
+    				</thead>
+    				<tbody>
+    				<tr>
+        				<td>just saw the force awakens for the second time in imax f*ck i love this movie #starwars
+</td>
+        				<td><button id="b1" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td>
+						<label id="l1" class="label label-success">?</label>
+						<script src="/static/js/b1.js"></script>
+						</td>
+      				</tr>
+      				<tr>
+        				<td>just saw star wars a force awakens for the 2nd time! still very sad in 1 part tying to figure out the girl character! dislike the dark side</td>
+        				<td><button id="b2" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td>
+						<label id="l2" class="label label-success">?</label>
+                        <script src="/static/js/b2.js"></script>
+						</td>
+      				</tr>
+      				<tr>
+        				<td>@seattlelife3 i saw some opinions of folks who tore apart the force awakens; called it garbage i loved it, personally! :)</td>
+        				<td><button id="b3" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l3" class="label label-success">?</label>
+                        <script src="/static/js/b3.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>today i saw a double feature of the force awakens &amp; deadpool with my brother and sister 5th tfa &amp; 2nd dp both still great :)</td>
+        				<td><button id="b4" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l4" class="label label-success">?</label>
+                        <script src="/static/js/b4.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>@johnboyega i just saw your signature card in the star wars: the force awakens series 2 card set! looks so awesome, let's hope i can get it!</td>
+        				<td><button id="b5" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l5" class="label label-success">?</label>
+                        <script src="/static/js/b5.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>@thegeekenders i finally saw the force awakens yesterday  maybe i should have waited for this instead ;)</td>
+        				<td><button id="b6" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l6" class="label label-success">?</label>
+                        <script src="/static/js/b6.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>just saw the force awakens again it was admittedly a small screen, but still plenty of bums on seats three months after original release</td>
+        				<td><button id="b7" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l7" class="label label-success">?</label>
+                        <script src="/static/js/b7.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>saw @starwars force awakens for the 3rd time, awesome moviethe young women behind me are postulating rey's origin i have my theories</td>
+        				<td><button id="b8" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l8" class="label label-success">?</label>
+                        <script src="/static/js/b8.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>i saw star wars the force awakens for the 9th time tonight it might have been in the top 3 best viewings ever #lovefinn @johnboyega</td>
+        				<td><button id="b9" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l9" class="label label-success">?</label>
+                        <script src="/static/js/b9.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>@freesyaya you will be more disappointed than after you saw the force awakens</td>
+        				<td><button id="b10" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l10" class="label label-success">?</label>
+                        <script src="/static/js/b10.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>saw "star wars: episode vii - the force awakens," a cracking adventure, my new third-ranked ep (after "jedi" and "empire") 35 of 4 stars</td>
+        				<td><button id="b11" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l11" class="label label-success">?</label>
+                        <script src="/static/js/b11.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>finally saw force awakens this weekend it was fine made me realize for the most part i like trailers more than movies now</td>
+        				<td><button id="b12" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l12" class="label label-success">?</label>
+                        <script src="/static/js/b12.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>i saw the force awakens for the fourth time today perfect way to end spring break</td>
+        				<td><button id="b13" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l13" class="label label-success">?</label>
+                        <script src="/static/js/b13.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>saw star wars the force awakens for the third time in theaters 🤗 still not over it </td>
+        				<td><button id="b14" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l14" class="label label-success">?</label>
+                        <script src="/static/js/b14.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>finally saw star wars: the force awakens i can honestly say it exceeded my expectations! great time with dad!</td>
+        				<td><button id="b15" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l15" class="label label-success">?</label>
+                        <script src="/static/js/b15.js"></script></td>
+      				</tr>
+					<tr>
+        				<td>just saw star wars a force awakens for the 2nd time! still very sad in 1 part tying to figure out the girl character! dislike the dark side</td>
+        				<td><button id="b16" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td>
+						<label id="l16" class="label label-success">?</label>
+                        <script src="/static/js/b16.js"></script>
+						</td>
+      				</tr>
+					<tr>
+        				<td>not been to the cinema since i saw the force awakens (for the 3rd time) feel like i'll be cheating on a bf by seeing something else!</td>
+        				<td><button id="b17" type="button" class="btn-xs btn-primary">Analyze!</button></td>
+        				<td><label id="l17" class="label label-success">?</label>
+                        <script src="/static/js/b17.js"></script></td>
+      				</tr>
+
+
+
+
+
+    				</tbody>
+  					</table>
+					</div>
 				    
 				</div>
 			</div>

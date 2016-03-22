@@ -27,7 +27,7 @@
 #                         else
 #
 #
-POSITIVE = set(['exciting', 'entertaining', 'good', 'love', 'loved', 'great', 'awesome', 'best', 'adventure', 'perfect', ':)'])
+POSITIVE = set(['exceeded', 'exciting', 'entertaining', 'good', 'love', 'loved', 'great', 'awesome', 'best', 'adventure', 'perfect', ':)'])
 NEGATIVE = set(['fine', 'disappointed', 'bad', 'worse', 'garbage', 'worst', 'mad', 'suck', 'sucked'])
 CHANGE = set(['personally', 'theoretically'])
 
@@ -93,12 +93,12 @@ def reject_1(word):
 	"""
 	r1 in graph
 	if input word is a change word, move to accept_2
-    if input word is positive, move to reject_1
+    if input word is positive, move to accept_1
     else, stay
 
 	"""
 	if is_positive(word):
-		return reject_1
+		return accept_1
 	elif is_change(word):
 		return accept_2
 	else:
@@ -138,8 +138,10 @@ def analyze(tweet):
 		return "Positive"
 	elif function is accept_2:
 		return "Positive"
-	else:
+	elif function is reject_1:
 		return "Negative or Inconclusive"
+	else:
+		return "Inconclusive"
 
 
 
