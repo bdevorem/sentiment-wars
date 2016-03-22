@@ -18,5 +18,5 @@ api = tweepy.API(auth)
 
 if __name__ == '__main__':
 
-	unfollow_friends(api)
+	get_friends(api)
 	
