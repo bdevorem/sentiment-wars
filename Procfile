@@ -1,1 +1,1 @@
-web: gunicorn sentiment_wars.wsgi --log-file -
+web: gunicorn snetiment-wars:app --log-file=-
