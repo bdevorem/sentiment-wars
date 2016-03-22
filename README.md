@@ -12,8 +12,9 @@ Look for a tweet that sparks your interest, and click "Analyze"
 
 ##To Do
 - [x] learn Twitter Search API  
-- [ ] write sentiment automaton  
+- [x] write sentiment automaton  
 - [x] query and analyze relevant tweets
+- [ ] format web app (templates and Bootstrap)
 
 ##Future Work
 - [ ] add user input functionality  
