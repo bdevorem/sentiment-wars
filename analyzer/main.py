@@ -35,13 +35,13 @@ if __name__ == '__main__':
 		choice = input("'y' for Twitter, 'n' for your own: ")
 
 		if choice == 'y':
-			tweets = search_tweets(api)
-
-			for tweet in tweets:
-				print ("Tweet: \n" + tweet)
-				# run tweet through automaton
-				result = analyze(tweet)
-				print (result)
+			with open('tweets.txt','r') as f:
+				for tweet in f:			
+					print ("Tweet:" + tweet)
+					# run tweet through automaton
+					result = analyze(tweet)
+					print ("Result: " + result+ "\n")
+					print("--------------------------")
 	
 		else:
 			print("--------------------------")
