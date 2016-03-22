@@ -7,6 +7,7 @@ negative sentiment
 Python 3.5.1 required  
 
 ##Usage
+Head on over to http://sentiment-wars.herokuapp.com  
 
 ##Examples
 
