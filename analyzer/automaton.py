@@ -27,9 +27,9 @@
 #                         else
 #
 #
-POSITIVE = set(['exceeded', 'exciting', 'entertaining', 'good', 'love', 'loved', 'great', 'awesome', 'best', 'adventure', 'perfect', ':)'])
-NEGATIVE = set(['fine', 'disappointed', 'bad', 'worse', 'garbage', 'worst', 'mad', 'suck', 'sucked'])
-CHANGE = set(['personally', 'theoretically'])
+POSITIVE = set(['good', 'exceeded', 'exciting', 'entertaining', 'good', 'love', 'loved', 'great', 'awesome', 'best', 'adventure', 'perfect', ':)'])
+NEGATIVE = set(['hate', 'hated', 'fine', 'disappointed', 'bad', 'worse', 'garbage', 'worst', 'mad', 'suck', 'sucked'])
+CHANGE = set(['personally', 'theoretically', 'but'])
 
 def is_negative(word):
 	if word in NEGATIVE:
