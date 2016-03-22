@@ -10,6 +10,8 @@ import json
 import time
 from keys import keys
 from functions import *
+from automaton import analyze
+
 SCREEN_NAME = keys['screen_name']
 CONSUMER_KEY = keys['consumer_key']
 CONSUMER_SECRET = keys['consumer_secret']
@@ -25,6 +27,17 @@ if __name__ == '__main__':
 	tweets = search_tweets(api)
 
 	for tweet in tweets:
-		print (tweet)
+		print ("Tweet: \n" + tweet)
 		# run tweet through automaton
+		result = analyze(tweet)
+		print (result)
+
+	#result = analyze("I love Star Wars, this should be positive")	
+	#print (result)
+	#result = analyze("I was disappointed by Star Wars, should be negative.")
+	#print (result)
+
+
+
+
 
