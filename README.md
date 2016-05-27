@@ -12,7 +12,7 @@ Head on over to http://sentiment-wars.herokuapp.com
 Look for a tweet that sparks your interest, and click "Analyze"  
 
 ###Command Line Interface
-Download or clone this project. Navigate to the `analyze/` directory
+Download or clone this project. Navigate to the `src/` directory
 and run the following command:  
 `python main.py`  
 You will be prompted with directions on how to analyze previously-queried
